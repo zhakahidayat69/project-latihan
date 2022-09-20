@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #square {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            display: grid;
+            place-items: center;
+        }
+        
+    </style>
+    <title>RGB Slider</title>
+</head>
+<body>
+    <div id="square">
+        <div id="output">rgb(0,0,0)</div>
+    </div>
+    <input type="range" min="0" max="255" id="red" oninput="colors()">
+    <input type="range" min="0" max="255" id="green" oninput="colors()">
+    <input type="range" min="0" max="255" id="blue" oninput="colors()">
+
+    <script>
+        function colors() {
+            const red = document.getElementById('red').value
+            const green = document.getElementById('green').value
+            const blue = document.getElementById('blue').value
+            const bg = document.getElementById('square')
+            const output = document.getElementById('output')
+
+            bg.style.backgroundColor = `rgb(${red},${green},${blue})`
+            output.innerText = `rgb(${red},${green},${blue})`
+        }
+    </script>
+</body>
+</html>

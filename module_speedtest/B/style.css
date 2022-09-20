@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    height: 400px;
+    display: grid;
+    gap: 3px;
+    grid-template-areas: 
+        'siteT siteT siteT nav1 nav2 nav3'
+        'postT postT postT postT postT sidebar'
+        'postM mainC mainC mainC mainC sidebar'
+        'postM mainC mainC mainC mainC ads'
+        'postM mainCI mainCI mainCI mainCI ads'
+        'postM mainCI mainCI mainCI mainCI other'
+        'footer footer footer footer footer footer'
+        ;
+}
+
+.siteT {
+    background-color: orange;
+    grid-area: siteT;
+}
+
+.nav1, .nav2, .nav3 {
+    background-color: pink;
+}
+
+.nav1 {grid-area: nav1;}
+.nav2 {grid-area: nav2;}
+.nav3 {grid-area: nav3;}
+
+.postT {
+    background-color: lightblue;
+    grid-area: postT;
+}
+
+.sidebar {
+    background-color: orangered;
+    grid-area: sidebar;
+}
+.postM {
+    background-color: lightgreen;
+    grid-area: postM;
+}
+
+.mainC {
+    background-color: grey;
+    grid-area: mainC;
+}
+.mainCI {
+    background-color: yellow;
+    grid-area: mainCI;
+}
+.ads {
+    background-color: darkgreen;
+    grid-area: ads;
+}
+.other {
+    background-color: magenta;
+    grid-area: other;
+}
+.footer {
+    background-color: brown;
+    grid-area: footer;
+}
