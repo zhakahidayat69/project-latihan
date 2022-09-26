@@ -23,6 +23,7 @@ use App\Http\Controllers\PollController;
 Route::group(['middleware' => 'api'], function($router) {
     Route::post('auth/login', [AuthController::class, 'login']);
     Route::get('auth/me', [AuthController::class, 'me']);
+    Route::get('auth/logout', [AuthController::class, 'logout']);
 
     Route::apiResource('poll', PollController::class);
     Route::post('poll/{pollId}/vote/{choiceId}', [PollController::class, 'vote']);

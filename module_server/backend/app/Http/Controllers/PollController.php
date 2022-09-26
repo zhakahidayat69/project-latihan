@@ -76,6 +76,7 @@ class PollController extends Controller
 
         $result = Vote::where('poll_id', $poll->id);
         $option_list = Choice::where('poll_id', $poll->id)->get();
+        $isVoted = $result->get()->where('user_id', auth()->user()->id)->count() > 0;
 
         $total_data = $result->count();
 
@@ -98,6 +99,7 @@ class PollController extends Controller
             'created_by' => $poll->created_by, 
             'created_at' => $poll->created_at,
             'creator' => $poll->creator,
+            'isVoted' => $isVoted,
             'result' => $percentage, 
             'choices' => $option_list, 
         ], 200);
