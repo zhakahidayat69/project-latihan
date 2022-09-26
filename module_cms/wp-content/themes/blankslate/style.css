@@ -1,0 +1,241 @@
+/*
+Theme Name: BlankSlate
+Theme URI: https://github.com/tidythemes/blankslate
+Author: TidyThemes
+Author URI: http://tidythemes.com/
+Description: Please read: tidythemes.com/concept. Donations: https://calmestghost.com/donate. BlankSlate is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
+Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Version: 2022.4
+Requires at least: 5.2
+Tested up to: 5.9
+Requires PHP: 7.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: blankslate
+
+BlankSlate WordPress Theme © 2011-2022 TidyThemes
+BlankSlate is distributed under the terms of the GNU GPL
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}html{scroll-behavior:smooth}body{line-height:1}a{text-decoration-skip-ink:auto}a[href^="tel"]{color:inherit;text-decoration:none}button{outline:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}input[type="search"]{-webkit-appearance:textfield}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
+.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;word-break:normal}
+.screen-reader-text:focus{background-color:#f7f7f7;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;-webkit-clip-path:none;clip-path:none;color:#007acc;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;right:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+.skip-link{left:-9999rem;top:2.5rem;z-index:999999999;text-decoration:underline}
+.skip-link:focus{display:block;left:6px;top:7px;font-size:14px;font-weight:600;text-decoration:none;line-height:normal;padding:15px 23px 14px;z-index:100000;right:auto}
+.visually-hidden:not(:focus):not(:active), .form-allowed-tags:not(:focus):not(:active){position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);white-space:nowrap}
+
+:root {
+    --main: #38416F;
+    --sub: #646B95;
+    --red: #ef233c;
+    --muted: #747477;
+    --bg: #F7F8FF;
+    --white: #FFFFFF;
+    --shadow: 1px 1px 8px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+}
+
+h2 {
+    color: var(--main);
+}
+
+a {
+    color: var(--sub);
+    text-decoration: none;
+}
+
+/* Navbar */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    /* position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0; */
+}
+
+#site-title h1 a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--main);
+}
+
+#site-description {
+    font-size: 1.1em;
+    color: var(--sub);
+}
+
+#menu .menu ul {
+    display: flex;
+    gap: 8px;
+}
+
+#menu .menu ul li a {
+    color: var(--main);
+    text-decoration: none;
+}
+
+/* End Navbar */
+
+
+
+/* Container */
+
+#container {
+    margin: 30px auto;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Content */
+
+#content {
+    padding: 10px 20px;
+}
+
+#content article {
+    padding: 10px 20px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+}
+
+#content header {
+    margin-bottom: 5px;
+    color: var(--sub);
+}
+
+#content header > * {
+    margin-bottom: 3px;
+}
+
+#content header .entry-title a {
+    font-size: 1.5em;
+    color: var(--main);
+}
+
+#content header h1.entry-title {
+    font-size: 1.6em;
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#content header .post-edit-link {
+    display: block;
+    color: var(--red);
+}
+
+#content .entry-summary p {
+    color: var(--sub);
+}
+#content .entry-content {
+    margin: 5px 0;
+}
+
+/* Sidebar */
+
+#sidebar {
+    padding: 10px 20px;
+}
+
+.xoxo > * {
+    margin-bottom: 15px;
+}
+
+.wp-block-search__label {
+    margin-bottom: 5px;
+}
+
+.wp-block-search__inside-wrapper input {
+    outline: none;
+    border-radius: 5px;
+}
+.wp-block-search__inside-wrapper button {
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--main);
+    color: var(--white);
+}
+
+.wp-block-group__inner-container h2 {
+    font-size: 1.3em;
+    margin-bottom: 3px;
+}
+
+
+/* End Container */
+
+
+/* Footer */
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    background-color: var(--main);
+    height: 50px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End Footer */
+
+
+/* Contact form */
+
+.wpcf7-form.init > p {
+    margin-bottom: 10px;
+}
+
+#name-form, #email-form, #subject-form, #textarea-form, #submit-form {
+    border: 1px solid var(--sub);
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input#submit-form {
+    border: 1px solid var(--main);
+    color: var(--main);
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    background-color: var(--white);
+}
+
+#submit-form:hover {
+    background-color: var(--main);
+    color: var(--white);
+}
+
+.wpcf7-response-output {
+    border: 2px solid var(--red) !important;
+}
+
+/* End Contact form */
+
+
+@media screen and (max-width: 768px) {
+    #container { 
+        padding: 10px 10px;
+        grid-template-columns: 1fr;
+    }
+}
